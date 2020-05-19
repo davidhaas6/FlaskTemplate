@@ -4,3 +4,7 @@ from werkzeug.exceptions import RequestEntityTooLarge
 from app import app, db
 from config import Config
 
+@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template('index.html', title='')
